@@ -1,0 +1,5 @@
+python  -   3.12.4
+Flask  -    3.0.3
+pandas -    2.2.2
+seaborn - 0.12.0
+sci-kit learn - 1.1
