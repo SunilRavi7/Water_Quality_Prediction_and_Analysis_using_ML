@@ -14,9 +14,10 @@
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Results](#results)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+7. [Project Structure](#project-structure)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Contact](#contact)
 
 ---
 
@@ -48,17 +49,57 @@ The model integrates various classifiers to enhance prediction accuracy, ensurin
 
 ---
 
-## **🛠️ Requirements**
+---
 
-Make sure you have the following dependencies installed:
+## **⚙️ Installation**
 
-```bash
-- Python 3.10
-- Flask 2.3.2
-- scikit-learn 1.3.0
-- Pandas 2.0.3
-- Numpy 1.25.0
-- Matplotlib 3.7.2
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/SunilRavi7/Water_Quality_Prediction_and_Analysis_using_ML.git
+    ```
+2. **Navigate to the project directory**:
+    ```bash
+    cd Water_Quality_Prediction_and_Analysis_using_ML
+    ```
+3. **Create a virtual environment** (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+4. **Install the dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+---
+
+## **🚀 Usage**
+
+To run the application, follow these steps:
+
+1. **Ensure you are in the project directory**:
+    ```bash
+    cd Water_Quality_Prediction_and_Analysis_using_ML
+    ```
+2. **Start the Flask application**:
+    ```bash
+    flask run
+    ```
+3. **Open your web browser** and go to `http://127.0.0.1:5000/` to access the web interface.
+
+4. **Input the chemical properties** of water into the provided fields and hit "Predict" to see if the water is safe for drinking.
+
+---
+
+## **📊 Results**
+
+The model will output whether the water is **safe** or **unsafe** for drinking based on the input parameters. The results are displayed on the web interface along with an explanation of the predicted outcome.
+
+---
+
+## **📂 Project Structure**
 
 Water_Quality_Prediction_and_Analysis_using_ML/
 │
@@ -78,19 +119,23 @@ Water_Quality_Prediction_and_Analysis_using_ML/
 └── README.md            # Project documentation
 
 
-🚀 Usage
-To run the application, follow these steps:
+---
 
-Ensure you are in the project directory:
+## **🤝 Contributing**
 
-bash
-Copy code
-cd Water_Quality_Prediction_and_Analysis_using_ML
-Start the Flask application:
+We welcome contributions to this project. If you have any improvements, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-bash
-Copy code
-flask run
-Open your web browser and go to http://127.0.0.1:5000/ to access the web interface.
+---
 
-Input the chemical properties of water into the provided fields and hit "Predict" to see if the water is safe for drinking.
+## **📝 License**
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+## **📧 Contact**
+
+For any questions or inquiries, feel free to contact me:
+
+- **Email**: [sunilr31r@gmail.com](mailto:sunilr31r@gmail.com)
+- **LinkedIn**: [Sunil R](https://www.linkedin.com/in/sunilravi7)
