@@ -78,3 +78,19 @@ Water_Quality_Prediction_and_Analysis_using_ML/
 └── README.md            # Project documentation
 
 
+🚀 Usage
+To run the application, follow these steps:
+
+Ensure you are in the project directory:
+
+bash
+Copy code
+cd Water_Quality_Prediction_and_Analysis_using_ML
+Start the Flask application:
+
+bash
+Copy code
+flask run
+Open your web browser and go to http://127.0.0.1:5000/ to access the web interface.
+
+Input the chemical properties of water into the provided fields and hit "Predict" to see if the water is safe for drinking.
