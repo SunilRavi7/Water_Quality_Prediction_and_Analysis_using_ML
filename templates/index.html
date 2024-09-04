@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set html and body to occupy full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #4b79a1, #283e51);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Title styling */
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .form-container, .example-container {
+            width: 45%;
+        }
+
+        /* Form and input styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-label {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        /* Output styling */
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Example container styling */
+        .example-container {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .example-container h2 {
+            margin-bottom: 15px;
+        }
+
+        .example-values {
+            text-align: left;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Water Quality Prediction</h1>
+            <form action="{{ url_for('predict') }}" method="post">
+                <label for="ph" class="feature-label">pH Level</label>
+                <input type="text" id="ph" name="ph" placeholder="e.g., 7.2" required>
+
+                <label for="Hardness" class="feature-label">Hardness (mg/L)</label>
+                <input type="text" id="Hardness" name="Hardness" placeholder="e.g., 204.89" required>
+
+                <label for="Solids" class="feature-label">Solids (ppm)</label>
+                <input type="text" id="Solids" name="Solids" placeholder="e.g., 20791.32" required>
+
+                <label for="Chloramines" class="feature-label">Chloramines (ppm)</label>
+                <input type="text" id="Chloramines" name="Chloramines" placeholder="e.g., 7.3" required>
+
+                <label for="Sulfate" class="feature-label">Sulfate (mg/L)</label>
+                <input type="text" id="Sulfate" name="Sulfate" placeholder="e.g., 368.52" required>
+
+                <label for="Conductivity" class="feature-label">Conductivity (μS/cm)</label>
+                <input type="text" id="Conductivity" name="Conductivity" placeholder="e.g., 564.31" required>
+
+                <label for="Organic_carbon" class="feature-label">Organic Carbon (ppm)</label>
+                <input type="text" id="Organic_carbon" name="Organic_carbon" placeholder="e.g., 10.38" required>
+
+                <label for="Trihalomethanes" class="feature-label">Trihalomethanes (μg/L)</label>
+                <input type="text" id="Trihalomethanes" name="Trihalomethanes" placeholder="e.g., 86.99" required>
+
+                <label for="Turbidity" class="feature-label">Turbidity (NTU)</label>
+                <input type="text" id="Turbidity" name="Turbidity" placeholder="e.g., 2.96" required>
+
+                <button type="submit">Predict</button>
+            </form>
+            {% if prediction_text %}
+            <div class="output">{{ prediction_text }}</div>
+            {% endif %}
+        </div>
+        <div class="example-container">
+            <h2>Example Values:</h2>
+            <div class="example-values">
+                <p><strong>pH Level:</strong> 7.2</p>
+                <p><strong>Hardness:</strong> 204.89 mg/L</p>
+                <p><strong>Solids:</strong> 20791.32 ppm</p>
+                <p><strong>Chloramines:</strong> 7.3 ppm</p>
+                <p><strong>Sulfate:</strong> 368.52 mg/L</p>
+                <p><strong>Conductivity:</strong> 564.31 μS/cm</p>
+                <p><strong>Organic Carbon:</strong> 10.38 ppm</p>
+                <p><strong>Trihalomethanes:</strong> 86.99 μg/L</p>
+                <p><strong>Turbidity:</strong> 2.96 NTU</p>
+                <p><strong>Prediction:</strong> The water is safe to drink.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
