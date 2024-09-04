@@ -60,6 +60,21 @@ Make sure you have the following dependencies installed:
 - Numpy 1.25.0
 - Matplotlib 3.7.2
 
-###You can install the necessary libraries using the following command:
-_pip install -r requirements.txt
+Water_Quality_Prediction_and_Analysis_using_ML/
+│
+├── static/
+│   ├── css/
+│   │   └── styles.css  # CSS for styling
+│   └── js/
+│       └── script.js   # Optional JavaScript
+│
+├── templates/
+│   └── index.html      # HTML template for Flask
+│
+├── water_potability.csv  # Dataset
+├── model.pkl            # Trained model
+├── app.py               # Flask app
+├── requirements.txt     # Required Python libraries
+└── README.md            # Project documentation
+
 
